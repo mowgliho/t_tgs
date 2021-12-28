@@ -37,10 +37,9 @@ dest_airport = None
 trip_type = None
 last_date = datetime.date.today()
 flights = []
-#print initial message
-print(messages[state])
 
 while True:
+  print(messages[state])
   input_text = input('> ')
   if state == 'from' and input_text.lower() in source_airports:
     source_airport = input_text.lower()
@@ -75,8 +74,6 @@ while True:
       break
   else:
     print(invalid_input)
-  # print message for new state
-  print(messages[state])
 
 print('\n\n\nYour Flights:')
 print('\n'.join(flights))
